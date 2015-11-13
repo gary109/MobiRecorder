@@ -1,0 +1,156 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+//#define _Disable_MapGPSFunc_
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#ifndef __OPTIMIZE__
+# define NSLog(...) NSLog(__VA_ARGS__)
+#else
+# define NSLog(...) {}
+#endif
+
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00) >> 8))/255.0 blue:((float)((rgbValue) & 0xFF))/255.0 alpha:1.0]
+
+//#define __tapToFocus__
+
+// MAP Info
+#define _MAP_DrawPointsMax                  25 //繪製路線25點，超過25重新計算！
+#define _MAP_DISTANCE_1000M                 1000
+#define _MAP_DISTANCE_5M                    5
+
+#define _MenuIconCounts_                    8
+#define _Menu_Icon_W_                       60
+#define _Menu_Icon_H_                       60
+
+#define degreesToRadians(x)                 ((x) * (M_PI / 180.0))
+
+
+
+// DashboardView
+#define DASHBOARD_WIDTH                     120
+#define DASHBOARD_HEIGHT                    160
+
+
+// About Capture
+#define CAPTURE_TOTAL_SECONDS               60*60
+// Low 10min 4mb
+// Low 30min 8mb
+// Low 60min 16mb
+// Low 120min xxmb      *
+
+// Medium 10min 12mb
+// Medium 60min 340mb   *
+
+#define CAPTURE_FRAMES_PER_SECOND           20
+#define totalSecondsToHr(X)                 (((unsigned long long)X)/3600%60)
+#define totalSecondsToMin(X)                (((unsigned long long)X)/60%60)
+#define totalSecondsToSec(X)                (((unsigned long long)X)%60)
+#define AVCapture_Quality                   AVCaptureSessionPresetMedium
+
+#define _CAPTURE_MAX_SEC_                  900
+#define _CAPTURE_UNIT_MAX_MB                10*1024*1024
+
+
+//    AVCaptureSessionPresetHigh    400x304  640x480  1280x720    640x480
+//    AVCaptureSessionPresetMedium  400x304  480x360  480x360     480x360
+//    AVCaptureSessionPresetLow     400x306  192x144  192x144     192x144
+//    AVCaptureSessionPreset640x480   NA     640x480  640x480     640x480
+//    AVCaptureSessionPreset1280x720  NA       NA     1280x720    NA
+//    AVCaptureSessionPresetPhoto     NA       NA     NA          NA
+
+// About GPS
+#define GPS_DesiredAccuracy_Quality         kCLLocationAccuracyBest
+//    kCLLocationAccuracyBestForNavigation    // 最高的精度 最耗電 导航情况下最高精度，一般要有外接电源时才 能使用
+//    kCLLocationAccuracyNearestTenMeters     // 精度10米
+//    kCLLocationAccuracyHundredMeters        // 精度100米
+//    kCLLocationAccuracyKilometer            // 精度1000米
+//    kCLLocationAccuracyThreeKilometers      // 精度3000米
+//    kCLLocationAccuracyBest                 // 精度3000米
+
+// Map View Tag
+#define _TAG_MAP_GPS_RECORD_BTN_                700
+#define _TAG_MAP_SNAPSHOT_BTN_                  701
+#define _TAG_MAP_DELETE_BTN_                    702
+#define _TAG_MAP_TRACKING_INFO_VIEW_            703
+#define _TAG_MAP_TRACKING_DST_LABEL_            704
+#define _TAG_MAP_TRACKING_AVS_LABEL_            705
+#define _TAG_MAP_TRACKING_MXS_LABEL_            706
+
+// Dashboard View Tag
+#define _TAG_DASHBOARD_SPEED_LABEL_             600
+#define _TAG_DASHBOARD_SPEED_POINTER_IMAGE_     601
+#define _TAG_DASHBOARD_BACKGROUND_IMAGE_        602
+#define _TAG_DASHBOARD_SPEED_UNIT_LABEL_        603
+#define _TAG_DASHBOARD_ALTITUDE_UNIT_LABEL_     604
+#define _TAG_DASHBOARD_ALTITUDE_LABEL_          605
+
+// Setting View Tag
+#define _TAG_SETTING_TITLE_VIEW_                300
+#define _TAG_SETTING_BACK_BTN_                  301
+#define _TAG_SETTING_ABOUT_BTN_                 302
+#define _TAG_SETTING_STORAGE_INFO_LABEL_        303
+#define _TAG_SETTING_ECO_SWITCH_                304
+#define _TAG_SETTING_TAP_FOCUS_SWITCH_          305
+#define _TAG_SETTING_STORAGE_SEGCTRL_           306
+#define _TAG_SETTING_VIDEO_QUALITY_SEGCTRL_     307
+#define _TAG_SETTING_GPS_ACCURACY_SEGCTRL_      308
+#define _TAG_SETTING_MAIN_SCREEN_SEGCTRL_       309
+#define _TAG_SETTING_CONTENT_VIEW_              310
+#define _TAG_SETTING_SPEED_UNIT_SEGCTRL_        311
+#define _TAG_SETTING_SCROLL_VIEW_               312
+#define _TAG_SETTING_LOCK_UNLOCK_BTN_           313
+#define _TAG_SETTING_AUDIO_INPUT_SEGCTRL_       314
+#define _TAG_SETTING_AUTO_FOCUS_SEGCTRL_        315
+#define _TAG_SETTING_DASHBOARD_SEGCTRL_         316
+
+// Camera View Tag
+#define _TAG_CAMERA_REC_STARTSTOP_BTN_          500
+#define _TAG_CAMERA_RECORDING_TIME_LABEL_       501
+#define _TAG_CAMERA_RECORDING_LED_IMAGE_        502
+
+
+// Menu View Tag
+#define _TAG_MENU_DASHBOARD_BTN_                400
+#define _TAG_MENU_MONITOR_BTN_                  401
+#define _TAG_MENU_FOLDER_BTN_                   402
+#define _TAG_MENU_SETTING_BTN_                  403
+#define _TAG_MENU_STORE_BTN_                    404
+#define _TAG_MENU_RADIO_BTN_                    405
+
+// Store View Tag
+#define _TAG_STORE_BACK_BTN_                    100
+#define _TAG_STORE_IAP_REMOVE_ADS_BTN_          101
+#define _TAG_STORE_CONTENT_VIEW_                102
+#define _TAG_STORE_RESTROE_PURCHASES_BTN_       103
+#define _TAG_STORE_TITLE_VIEW_                  104
+#define _TAG_STORE_SCROLL_VIEW_                 105
+
+// Movies Table View Tag
+#define _TAG_MOVIESTABLE_VIEW_                  200
+
+// Radio View Tag
+#define _TAG_RADIO_WEBVIEW_                     800
+#define _TAG_RADIO_BACK_BTN_                    801
+#define _TAG_RADIO_PLAY_BTN_                    802
+#define _TAG_RADIO_TITLE_VIEW_                  803
+#define _TAG_RADIO_SCROLL_VIEW_                 804
+#define _TAG_RADIO_CONTENT_VIEW_                805
+
+
+
+

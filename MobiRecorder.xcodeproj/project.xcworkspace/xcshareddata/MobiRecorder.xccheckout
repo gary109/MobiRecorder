@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>52106CE8-676F-419F-A688-28F933E45AE8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EDB1A91FA262FCA085F910A27A30374F8B995CCD</key>
+		<string>/Users/gary109/Dropbox/Workspace/gyhouse/MobiRecorder</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MobiRecorder.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EDB1A91FA262FCA085F910A27A30374F8B995CCD</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>/Users/gary109/Dropbox/Workspace/gyhouse/MobiRecorder</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EDB1A91FA262FCA085F910A27A30374F8B995CCD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EDB1A91FA262FCA085F910A27A30374F8B995CCD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MobiRecorder</string>
+		</dict>
+	</array>
+</dict>
+</plist>

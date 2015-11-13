@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Dashboard</key>
+	<string>Yes</string>
+	<key>AutoFocus</key>
+	<string>Yes</string>
+	<key>AudioInput</key>
+	<string>Yes</string>
+	<key>SpeedUnit</key>
+	<string>km/h</string>
+	<key>RemoveAds</key>
+	<string>0</string>
+	<key>WeAreRecording</key>
+	<string>0</string>
+	<key>MainScreen</key>
+	<string>Video</string>
+	<key>TapToFocus</key>
+	<string>0</string>
+	<key>ECO</key>
+	<string>0</string>
+	<key>VideoQuality</key>
+	<string>Normal</string>
+	<key>StorageSize</key>
+	<string>1G</string>
+</dict>
+</plist>
